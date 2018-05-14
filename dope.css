@@ -1,6 +1,6 @@
 @font-face {
     font-family: ProductSans;
-    src: url('https://res.cloudinary.com/rosh/raw/upload/v1526207471/fonts/psregular.woff');
+    src: url('https://cdn.rawgit.com/weakit/stuff/ec9437f7/fonts/psregular.woff');
 }
 
 @keyframes fade {
