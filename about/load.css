@@ -128,7 +128,10 @@
   animation-delay: 2.2s;
 }
 .al7-a:after {
-  animation-delay: 2.4s;
+  animation-delay: 2.3s;
+}
+.al8-a:after {
+  animation-delay: 2.5s;
 }
 
 .ap-a {
@@ -154,7 +157,7 @@
   animation-delay: 2s;
 }
 .a7-a {
-  animation-delay: 2.1s;
+  animation-delay: 2.2s;
 }
 
 .click-a {

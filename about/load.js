@@ -22,6 +22,7 @@ $(document).ready(function () {
     $(".al5").addClass('al5-a');
     $(".al6").addClass('al6-a');
     $(".al7").addClass('al7-a');
+    $(".al8").addClass('al8-a');
     $(".alp").addClass('alp-a');
     $("#click").addClass('click-a')
     $('div#overlay').animate({
