@@ -1,7 +1,3 @@
-$(document).ready(function () {
-    $('div#overlay').fadeOut();
-});
-
 function _calculateAge(birthday) {
   var ageDifMs = Date.now() - birthday.getTime();
   var ageDate = new Date(ageDifMs);
