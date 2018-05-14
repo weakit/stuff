@@ -23,11 +23,11 @@ $("#age").text(full);
 var dark = false;
 
 function darkness(){
-  $('link[href="alight.css"]').attr('href','adark.css');
+  $('link[href="https://github.com/weakit/stuff/blob/master/about/alight.css"]').attr('href','https://cdn.rawgit.com/weakit/stuff/f1f33c78/about/adark.css');
 }
 
 function light(){
-  $('link[href="adark.css"]').attr('href','alight.css');
+  $('link[href="https://cdn.rawgit.com/weakit/stuff/f1f33c78/about/adark.css"]').attr('href','https://github.com/weakit/stuff/blob/master/about/alight.css');
 }
 
 $('div#click').click(function (){
