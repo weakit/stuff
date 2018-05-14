@@ -1,0 +1,12 @@
+@font-face {
+    font-family: ProductSans;
+    src: url('../fonts/psregular.woff');
+}
+@font-face {
+    font-family: one;
+    src: url('../fonts/psbitalic.woff');
+}
+@font-face {
+    font-family: two;
+    src: url('../fonts/psitalic.woff');
+}

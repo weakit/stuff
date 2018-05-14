@@ -1,0 +1,188 @@
+@font-face {
+    font-family: ProductSans;
+    src: url('https://res.cloudinary.com/rosh/raw/upload/v1526207471/fonts/psregular.woff');
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes grow-left {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: -200vh;
+    opacity: 0.3;
+  }
+  to {
+    margin-left: 0;
+    opacity: 0.9;
+  }
+}
+
+html {
+  background-color: rgb(0, 0, 0);
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: black;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  z-index: -100;
+}
+
+#content {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 50;
+}
+
+#click, #hack{
+  text-align: center;
+  line-height: 0px;
+  font-size: 2.5vh;
+  color: #ffffff;
+  opacity: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5px;
+}
+
+.span {
+  text-align: center;
+  line-height: 0px;
+  font-size: 1.1vw;
+  color: #ffffff;
+  opacity: 1;
+  font-family: 'Roboto', sans-serif;
+}
+
+.h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 8vw;
+  font-family: ProductSans;
+}
+
+.spanner-a {
+  animation: slide-left ease 1s forwards;
+  opacity: 0;
+  line-height: 0px;
+  animation-delay: 1s;
+}
+
+.home{
+  margin: 0;
+  width: 100%;
+  font-family: ProductSans;
+  font-size: 4vh;
+  color: white;
+  z-index: 250;
+}
+
+.home span {
+  top: 2vh;
+}
+
+.home a {
+  color: white;
+  text-decoration: none;
+}
+
+.left {
+  opacity: 0;
+  position: fixed;
+  left: 2vw;
+  cursor: pointer;
+}
+
+.left-a {
+  animation: fade ease .4s forwards;
+  animation-delay: 0.7s;
+}
+
+.right {
+  position: fixed;
+  opacity: 0;
+  right: 2vw;
+  cursor: pointer;
+}
+
+.right-a {
+  animation: fade ease 0.4s forwards;
+  animation-delay: 1.6s;
+}
+
+.vw {
+  position: absolute;
+  left: 15vw;
+  top: 4.5vh;
+  width: 70vw;
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0.8;
+}
+
+.vw-a {
+  animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+  animation-delay: 1.1s;
+}
+
+.line {
+  stroke: white;
+  stroke-width: 1vh;
+}
+
+@media (max-width:801px)  {
+  .vw {
+    width: 50vw;
+    left: 25vw;
+  }
+}
+
+@media (max-width:301px)  {
+  .vw {
+    opacity: 0;
+  }
+}
+
+@media (max-width:501px)  {
+  .h1 {
+    font-size: 8vh;
+  }
+}

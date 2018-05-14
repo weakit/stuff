@@ -1,0 +1,343 @@
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  transition: background-color .1s ease;
+  -webkit-transition: background-color .1s ease;
+  -moz-transition: background-color .1s ease;
+  background-color: black;
+  color: white;
+}
+
+.awk1 {
+  background-color: white;
+}
+
+.awk2 {
+  white-space: nowrap;
+  color: black;
+}
+
+.head{
+  margin: 0;
+  width: 100%;
+  font-family: ProductSans;
+  font-size: 4vh;
+  position: absolute;
+  background-color: black;
+  z-index: 100;
+  transition: background-color .3s ease, color .3s ease;
+  -webkit-transition: background-color .3s ease, color .3s ease;
+  -moz-transition: background-color .3s ease, color .3s ease;
+}
+
+.invert {
+  background-color: white;
+  color: black;
+  transition: background-color .3s ease, color .3s ease;
+  -webkit-transition: background-color .3s ease, color .3s ease;
+  -moz-transition: background-color .3s ease, color .3s ease;
+}
+
+.head span {
+  top: 2vh;
+  z-index: 250;
+}
+
+.head a {
+  text-decoration: none;
+}
+
+.left {
+  opacity: 0;
+  position: absolute;
+  opacity: 0;
+  left: 2vw;
+  animation: fade ease .4s forwards;
+  animation-delay: 0.7s;
+  cursor: pointer;
+}
+
+.right {
+  position: absolute;
+  opacity: 0;
+  right: 2vw;
+  animation: fade ease 0.4s forwards;
+  animation-delay: 1.6s;
+  cursor: pointer;
+}
+
+.vw {
+  position: absolute;
+  left: 15vw;
+  top: 4vh;
+  width: 70vw;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: grow cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+  animation-delay: 1.1s;
+  opacity: 0.8;
+}
+
+.line {
+  stroke: white;
+  stroke-width: 1vh;
+}
+
+@media (max-width:801px)  {
+  .vw {
+    width: 50vw;
+    left: 25vw;
+  }
+}
+
+@media (max-width:301px)  {
+  .vw {
+    opacity: 0;
+  }
+}
+
+.title {
+  position: relative;
+  cursor: default;
+}
+
+.stuff {
+  opacity: 0;
+  position: relative;
+  display: inline-block;
+  font-size: 15vh;
+  /* color: white; */
+  overflow: hidden;
+  font-family: ProductSans;
+  left: 1vw;
+  animation: fade .4s ease forwards;
+  animation-delay: 1.2s;
+  transition: background-color .3s ease, color .3s ease;
+  -webkit-transition: background-color .3s ease, color .3s ease;
+  -moz-transition: background-color .3s ease, color .3s ease;
+  z-index: 300;
+}
+
+.al1:after, .al2:after, .al3:after, .al4:after, .al5:after, .al6:after, .al7:after {
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: grow cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s forwards;
+}
+.al1:after {
+  animation-delay: 1.7s;
+}
+.al2:after {
+  animation-delay: 1.8s;
+}
+.al3:after {
+  animation-delay: 1.9s;
+}
+.al4:after {
+  animation-delay: 2s;
+}
+.al5:after {
+  animation-delay: 2.3s;
+}
+.al6:after {
+  animation-delay: 2.2s;
+}
+.al7:after {
+  animation-delay: 2.4s;
+}
+
+
+.a1, .a2, .a3, .a4, .a5, .a6, .a7 {
+  opacity: 0;
+  animation: fade .4s ease forwards;
+}
+
+.a1 {
+  animation-delay: 1.5s;
+}
+.a2 {
+  animation-delay: 1.6s;
+}
+.a3 {
+  animation-delay: 1.7s;
+}
+.a4 {
+  animation-delay: 1.8s;
+}
+.a5 {
+  animation-delay: 1.9s;
+}
+.a6 {
+  animation-delay: 2s;
+}
+.a7 {
+  animation-delay: 2.1s;
+}
+
+.hover:hover, .reline:hover {
+  background: white;
+  color: black;
+  transition: background-color .3s ease, color .3s ease;
+  -webkit-transition: background-color .3s ease, color .3s ease;
+  -moz-transition: background-color .3s ease, color .3s ease;
+}
+
+p::selection, .reline::selection, span::selection, br::selection {
+  /* HACK: almost white */
+  background-color: rgba(255, 255, 255, .99);
+  color: black;
+}
+
+br::selection {
+  background-color: rgba(255, 255, 255, .95);
+  color: black;
+}
+
+.stuff::selection {
+  background-color: rgba(0, 0, 0, .99);
+  color: white;
+}
+
+.stuff:after {
+  transform: scaleX(0);
+  transform-origin: left;
+  content: '';
+  height: 2vh;
+  width: 100%;
+  display: block;
+  background: white;
+  animation: grow cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+  animation-delay: 1.3s;
+}
+
+.unline, .reline {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+}
+
+.unline:after, .reline:after {
+  content: '';
+  display: block;
+  height: 3px;
+}
+
+.reline {
+  margin: 0;
+  transition: background-color .3s ease, color .3s ease;
+  -webkit-transition: background-color .3s ease, color .3s ease;
+  -moz-transition: background-color .3s ease, color .3s ease;
+}
+
+.unline:after{
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+  -webkit-transition: width .5s ease, background-color .5s ease;
+  -moz-transition: width .5s ease, background-color .5s ease;
+}
+
+.reline:after{
+  width: 100%;
+  background: white;
+}
+
+.unline:hover:after {
+  width: 100%;
+  background: white;
+}
+
+p {
+  position: relative;
+  font-family: ProductSans;
+  font-size: 3.5vh;
+  left: 1vw;
+  cursor: default;
+}
+
+a, span {
+  font-size: 3.5vh;
+}
+
+.one {
+  font-family: one;
+}
+
+.two {
+  font-family: two;
+}
+
+.awkward {
+  cursor: pointer;
+}
+
+.awkward:active ~ span {
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    /* transform-origin: left; */
+}
+
+.full {
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background: black;
+}
+
+.inv {
+  color: black;
+  transition: background-color .3s ease, color .3s ease;
+  -webkit-transition: background-color .3s ease, color .3s ease;
+  -moz-transition: background-color .3s ease, color .3s ease;
+}
+.inv:hover {
+  color: white;
+  transition: background-color .3s ease, color .3s ease;
+  -webkit-transition: background-color .3s ease, color .3s ease;
+  -moz-transition: background-color .3s ease, color .3s ease;
+}
+
+#click {
+  position: fixed;
+  width: 5vh;
+  height: 4vh;
+  bottom: 0;
+  right: 1vw;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  animation: grow cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+  animation-delay: 2s;
+  z-index: 330;
+  cursor: pointer;
+}
