@@ -22,6 +22,11 @@
   width: 64px;
   height: 64px;
 }
+
+.zero {
+  opacity: 0;
+}
+
 .lds-ring div {
   box-sizing: border-box;
   display: block;

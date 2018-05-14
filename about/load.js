@@ -1,3 +1,6 @@
+setTimeout(function () {
+  $(".lds-ring").removeClass('zero')
+}, 100);
 $(document).ready(function () {
     // naive code ahead
     $("svg.vw").addClass('vw-a');
@@ -20,5 +23,11 @@ $(document).ready(function () {
     $(".al6").addClass('al6-a');
     $(".al7").addClass('al7-a');
     $(".alp").addClass('alp-a');
-    $('div#overlay').fadeOut();
+    $("#click").addClass('click-a')
+    $('div#overlay').animate({
+      'width': '0px'
+    }, 300, function() {
+      $('div#overlay').remove();
+    });
+    // $('div#overlay').fadeOut();
 });
