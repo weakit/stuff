@@ -32,11 +32,10 @@ texts = Array("Bored yet?", "stars", "snakes", "humans", "robots", "donuts",
 'creases', 'streets', 'lo-los', 'dips', 'platinum', 'iron', 'silver', 'gold',
 'wrecks', 'traffic', 'vibes', 'necks', 'eyeballs', 'hoods', 'b', 'paranoid',
 'drivers', 'doubt', 'chrysalism', 'octopi', 'skates', 'shrek', 'google_G',
-'aerostats', 'spasmatomancy', 'yegg', 'xenoglossia', 'zeus', 'gulosity', 'ocarinas',
+'aerostats', 'talks', 'yegg', 'xenoglossia', 'zeus', 'gulosity', 'ocarinas',
 'horses', 'dogs', 'talia', '渚', 'fantigue', 'circles', 'boards', 'skateboards',
 'ninjas', 'wine', 'lipstick', 'funds', 'tongues', 'chronic', 'compression', 'waves',
-'esparanto', 'català', '华语', 'dansk', 'suomi', 'français', 'deutsch',
-'italiano', 'ελληνικά', 'português', 'polski', 'ру́сский', 'српски', 'earth', 'sol',
+'esparanto', 'català', '华语', 'dansk', 'suomi', 'polski', 'earth', 'sol',
 'luna', 'venus', 'mars', 'jupiter', 'saturn', 'neptune', 'uranus', 'pluto', 'aurorae',
 'pudding', 'ice', 'genius', 'crazy', 'help', 'names', 'vision', 'clannad', 'decay',
 'loneliness', 'hunger', 'amy', ' ', 'ducks', 'werewolves', 'vampires', 'cerberus',
@@ -45,7 +44,7 @@ texts = Array("Bored yet?", "stars", "snakes", "humans", "robots", "donuts",
 'wyverns', 'dragons', 'history', 'z', 'mouths', 'soon', 'minus', 'plus', 'equals',
 'states', 'ganon', 'staples', 'life', 'years', "'fun'", 'work', 'thoughts', 'fights',
 'alright', 'black', 'white', 'blue', 'red', 'purple', 'green', 'brown', 'orange',
-'wow') // words are hard af
+'wow', 'wait', 'frames', 'andromeda', 'waste', 'animate', '2') // words are hard af
 
 function animate(){
   setTimeout(function(){
