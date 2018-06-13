@@ -20,7 +20,8 @@ html, body {
 .head{
   margin: 0;
   width: 100%;
-  font-family: ProductSans;
+  font-family: 'Product Sans';
+  font-weight: 400;
   font-size: 4vh;
   position: absolute;
   top: 1vh;
@@ -104,7 +105,9 @@ html, body {
   font-size: 15vh;
   /* color: white; */
   overflow: hidden;
-  font-family: ProductSans;
+  font-family: 'Product Sans';
+  font-weight: bold;
+  letter-spacing: -0.7vh;
   left: 1vw;
   transition: background-color .3s ease, color .3s ease;
   -webkit-transition: background-color .3s ease, color .3s ease;
@@ -185,7 +188,8 @@ br::selection {
 
 p {
   position: relative;
-  font-family: ProductSans;
+  font-family: 'Product Sans';
+  font-weight: 400;
   font-size: 3.5vh;
   left: 1vw;
   cursor: default;
@@ -196,11 +200,15 @@ a, span {
 }
 
 .one {
-  font-family: one;
+  font-family: 'Product Sans';
+  font-weight: 700;
+  font-style: italic;
 }
 
 .two {
-  font-family: two;
+  font-family: 'Product Sans';
+  font-weight: 400;
+  font-style: italic;
 }
 
 .awkward {
