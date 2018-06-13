@@ -10,10 +10,14 @@ age = _calculateAge(d).toString();
 var full = "";
 
 if (age < 17) {
-  full = "only " + age;
+  full = "only " + age.toString();
 }
 else{
   full = age;
+}
+
+if (full == "NaN"){
+  full = "an actual living person";
 }
 
 console.log(full);
@@ -23,11 +27,11 @@ $("#age").text(full);
 var dark = false;
 
 function darkness(){
-  $('link[href="https://cdn.rawgit.com/weakit/stuff/f1f33c78/about/alight.css"]').attr('href','https://cdn.rawgit.com/weakit/stuff/f1f33c78/about/adark.css');
+  $('link[href="https://cdn.rawgit.com/weakit/stuff/f46e0dbd/about/alight.css"]').attr('href','https://cdn.rawgit.com/weakit/stuff/f46e0dbd/about/adark.css');
 }
 
 function light(){
-  $('link[href="https://cdn.rawgit.com/weakit/stuff/f1f33c78/about/adark.css"]').attr('href','https://cdn.rawgit.com/weakit/stuff/f1f33c78/about/alight.css');
+  $('link[href="https://cdn.rawgit.com/weakit/stuff/f46e0dbd/about/adark.css"]').attr('href','https://cdn.rawgit.com/weakit/stuff/f46e0dbd/about/alight.css');
 }
 
 $('div#click').click(function (){
