@@ -1,4 +1,4 @@
-$(window).on('load', function(){
+$(document).on('load', function(){
    $('div#overlay').fadeOut();
    setTimeout(function () {
      $('h1#spanner').addClass('spanner-a')
