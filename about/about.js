@@ -27,11 +27,11 @@ $("#age").text(full);
 var dark = false;
 
 function darkness(){
-  $('link[href="./about/alight.css"]').attr('href','./about/adark.css');
+  $('link[href="alight.css"]').attr('href','adark.css');
 }
 
 function light(){
-  $('link[href="./about/adark.css"]').attr('href','./about/alight.css');
+  $('link[href="adark.css"]').attr('href','alight.css');
 }
 
 $('div#click').click(function (){
