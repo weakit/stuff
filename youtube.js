@@ -21,6 +21,7 @@ function onYouTubeIframeAPIReady() {
       'disablekb': 1,
       'playsinline': 1,
       'playlist': 'dQw4w9WgXcQ',
+      'modestbranding': 1,
     },
     events: {
       'onReady': onPlayerReady,
