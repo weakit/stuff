@@ -15,10 +15,12 @@ function onYouTubeIframeAPIReady() {
       'controls': 0,
       'rel': 0,
       'fs': 0,
+      'iv_load_policy': 3,
       'showinfo': 0,
       'loop': 1,
       'disablekb': 1,
       'playsinline': 1,
+      'playlist': 'dQw4w9WgXcQ',
     },
     events: {
       'onReady': onPlayerReady,
