@@ -60,7 +60,7 @@ body {
   left: 0;
   transform: translateY(-50%);
   width: 100%;
-  z-index: 50;
+  z-index: 69;
 }
 
 #vidblocker {
@@ -71,6 +71,7 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
+  z-index: 50;
 }
 
 #click, #hack{
@@ -135,6 +136,7 @@ body {
   position: fixed;
   left: 2vw;
   cursor: pointer;
+  z-index: 500;
 }
 
 .left-a {
@@ -147,6 +149,7 @@ body {
   opacity: 0;
   right: 2vw;
   cursor: pointer;
+  z-index: 500;
 }
 
 .right-a {
