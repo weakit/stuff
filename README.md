@@ -1,2 +1,2 @@
 # rosh's stuff
-a homepage for my website that was not required
+a website that was not required
