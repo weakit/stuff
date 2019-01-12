@@ -16,9 +16,15 @@ $.getScript("./words/nouns.min.js", function(){});
 
 function animate(){
   setTimeout(function(){
+    $('h1#spanner').fadeTo(0, 0.85);
+    $('h1#spanner').removeClass('spanner-a');
     setInterval(function(){
-      var item =  adj[Math.floor(Math.random()*adj.length)] + " " + non[Math.floor(Math.random()*non.length)];
-      $('h1#spanner').text(item);
-    }, 3000);
+      $('h1#spanner').fadeTo(75, 0.5);
+      setTimeout(function(){
+        var item =  adj[Math.floor(Math.random()*adj.length)] + " " + non[Math.floor(Math.random()*non.length)];
+        $('h1#spanner').text(item);
+        $('h1#spanner').fadeTo(75, 0.85);
+      }, 75);
+    }, 3269);
   }, 2000);
 }

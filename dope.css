@@ -26,7 +26,7 @@
   }
   to {
     margin-left: 0;
-    opacity: 0.9;
+    opacity: 0.85;
   }
 }
 
@@ -85,11 +85,29 @@ body {
   font-weight: 400;
 }
 
-.footer {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 5px;
+#feet {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  width: 100vw;
+  color: white;
+  z-index: 250;
+  opacity: 0;
+  overflow: hidden;
+}
+
+#feet a{
+  color: white;
+  text-decoration: none;
+}
+
+.feet {
+  text-align: center;
+  font-family: 'Inter UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 0.85vw;
+  line-height: 0.1vw;
 }
 
 .span {
@@ -108,12 +126,13 @@ body {
   font-weight: 700;
   font-family: 'Inter UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -0.55vw;
+  line-height: 0px;
+  opacity: 0.85;
 }
 
 .spanner-a {
   animation: slide-left ease 1s forwards;
   opacity: 0;
-  line-height: 0px;
   animation-delay: 1s;
 }
 
