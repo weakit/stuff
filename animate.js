@@ -2,6 +2,7 @@ $(window).on('load', function(){
    $('div#overlay').fadeOut();
    setTimeout(function () {
      $('h1#spanner').addClass('spanner-a');
+     $('h1#spannor').addClass('spanner-a');
      $('span.left').addClass('left-a');
      $('span.right').addClass('right-a');
      $('svg.vw').addClass('vw-a');
