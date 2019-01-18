@@ -24,31 +24,12 @@ console.log(full);
 
 $("#age").text(full);
 
-var dark = false;
-
-function darkness(){
-  $('link[href="alight.css"]').attr('href','adark.css');
-}
-
-function light(){
-  $('link[href="adark.css"]').attr('href','alight.css');
-}
-
-$('div#click').click(function (){
-  if (!dark){
-    darkness()
-    dark = true;
-  }
-  else {
-    light()
-    dark = false
-  }
-});
 
 function awkward(){
   $('body').addClass('awk1');
   $('html').addClass('awk1');
   $("#rosh").addClass('awk2');
+  $(".head").css('opacity', '0');
   $("#rosh").text("if it's awkward stuff, please try to be as not awkward as possible, otherwise it'll get really awkward and then i not feel like talking to you, and… and, crap this is really awkward. ");
 }
 
@@ -57,6 +38,7 @@ function un_awkward() {
   $("#rosh").text("Rosh's stuff");
   $('body').removeClass('awk1');
   $('html').removeClass('awk1');
+  $(".head").css('opacity', '0.98');
 }
 
 $('.awkward').mousedown(function() {

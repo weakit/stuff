@@ -12,6 +12,10 @@
   opacity: 0;
 }
 
+#spannor {
+  opacity: 0;
+}
+
 .lds-ring {
   display: inline-block;
   position: relative;
@@ -21,7 +25,7 @@
   position: fixed;
   width: 64px;
   height: 64px;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 .lds-ring div {
   box-sizing: border-box;

@@ -53,13 +53,9 @@ body {
 }
 
 #content {
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 50%;
+  flex: 1;
   left: 0;
-  transform: translateY(-50%);
-  width: 100%;
+  margin: auto;
   z-index: 69;
 }
 
@@ -68,10 +64,11 @@ body {
   margin: 0;
   padding: 0;
   left: 0; top: 0;
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
   z-index: 50;
+  display: flex;
 }
 
 #click, #hack{
@@ -80,17 +77,17 @@ body {
   font-size: 1.33vw; /* to infinity and beyond */
   color: #ffffff;
   opacity: 0;
-  font-family: 'Inter UI', sans-serif;
+  font-family: 'Inter UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -0.03vw;
   font-weight: 400;
 }
 
 #feet {
-  position: fixed;
+  position: absolute;
   margin: 0;
   padding: 0;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   color: white;
   z-index: 250;
   opacity: 0;
@@ -106,7 +103,7 @@ body {
   text-align: center;
   font-family: 'Inter UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 500;
-  font-size: 0.85vw;
+  font-size: 2vh;
   line-height: 0.1vw;
 }
 
@@ -137,7 +134,7 @@ body {
 }
 
 .home{
-  margin: 0;
+  margin: 0
   width: 100%;
   font-family: 'Inter UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 500;
@@ -154,6 +151,19 @@ body {
 .home a {
   color: white;
   text-decoration: none;
+}
+
+.home div {
+  position: fixed;
+  left: 0; top: 0;
+  z-index: 399;
+  width: 100vw;
+  margin: 0; padding: 0;
+  height: 10vh;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }
 
 .left {
@@ -183,13 +193,15 @@ body {
 }
 
 .vw {
-  position: absolute;
+  position: fixed;
   left: 15vw;
-  top: 4.5vh;
+  top: 4.35vh;
   width: 70vw;
   transform: scaleX(0);
   transform-origin: left;
-  opacity: 0.8;
+  opacity: 0.9;
+  z-index: 500;
+  height: 1vh;
 }
 
 .vw-a {

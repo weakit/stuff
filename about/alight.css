@@ -1,41 +1,53 @@
 html, body {
-  max-width: 100%;
+  /* max-width: 100%; */
   overflow-x: hidden;
   transition: background-color .1s ease;
   -webkit-transition: background-color .1s ease;
   -moz-transition: background-color .1s ease;
-  background-color: white;
-  color: black;
+  background-color: #f4f4f4;
+  color: #111;
+}
+
+#C {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .awk1 {
-  background-color: black;
+  background-color: #111;
+  z-index: 100;
 }
 
 .awk2 {
   white-space: nowrap;
-  color: white;
+  color: #f4f4f4;
+  padding: 0;
+  z-index: 100;
+}
+
+.dis {
+  opacity: 0;
 }
 
 .head{
   margin: 0;
   width: 100%;
-  font-family: 'Product Sans';
-  font-weight: 400;
+  font-family: 'Inter UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
   font-size: 4vh;
-  position: absolute;
-  top: 1vh;
-  left: 0;
-  background-color: white;
+  position: fixed;
+  top: 0; left: 0;
+  height: 9vh; opacity: 0.98;
+  background-color: #f4f4f4;
   z-index: 100;
-  transition: background-color .3s ease, color .3s ease;
-  -webkit-transition: background-color .3s ease, color .3s ease;
-  -moz-transition: background-color .3s ease, color .3s ease;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .invert {
-  background-color: black;
-  color: white;
+  background-color: #111;
+  color: #f4f4f4;
   transition: background-color .3s ease, color .3s ease;
   -webkit-transition: background-color .3s ease, color .3s ease;
   -moz-transition: background-color .3s ease, color .3s ease;
@@ -72,11 +84,12 @@ html, body {
   width: 70vw;
   transform: scaleX(0);
   transform-origin: left;
-  opacity: 0.8;
+  opacity: 0.9;
+  height: 1vh;
 }
 
 .line {
-  stroke: black;
+  stroke: #111;
   stroke-width: 1vh;
 }
 
@@ -96,6 +109,7 @@ html, body {
 .title {
   position: relative;
   cursor: default;
+  height: 35vh;
 }
 
 .stuff {
@@ -104,38 +118,36 @@ html, body {
   display: inline-block;
   font-size: 15vh;
   overflow: hidden;
-  font-family: 'Product Sans';
-  font-weight: bold;
-  letter-spacing: -0.7vh;
-  left: 1vw;
+  font-family: 'Inter UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.8vh;
   transition: background-color .3s ease, color .3s ease;
   -webkit-transition: background-color .3s ease, color .3s ease;
   -moz-transition: background-color .3s ease, color .3s ease;
-  z-index: 300;
+  z-index: 75;
 }
 
 .hover:hover, .reline:hover {
-  background: black;
-  color: white;
+  background: #111;
+  color: #f4f4f4;
   transition: background-color .3s ease, color .3s ease;
   -webkit-transition: background-color .3s ease, color .3s ease;
   -moz-transition: background-color .3s ease, color .3s ease;
 }
 
 p::selection, .reline::selection, span::selection, br::selection {
-  /* HACK: almost black */
   background-color: rgba(0, 0, 0, .99);
-  color: white;
+  color: #f4f4f4;
 }
 
 br::selection {
   background-color: rgba(0, 0, 0, .95);
-  color: white;
+  color: #f4f4f4;
 }
 
 .stuff::selection {
   background-color: rgba(255, 255, 255, .99);
-  color: black;
+  color: #111;
 }
 
 .stuff:after {
@@ -145,19 +157,19 @@ br::selection {
   height: 2vh;
   width: 100%;
   display: block;
-  background: black;
+  background: #111;
 }
 
 .unline, .reline {
   text-decoration: none;
   display: inline-block;
-  color:black;
+  color:#111;
 }
 
 .unline:after, .reline:after {
   content: '';
   display: block;
-  height: 3px;
+  height: 2px;
 }
 
 .reline {
@@ -177,20 +189,20 @@ br::selection {
 
 .reline:after{
   width: 100%;
-  background: black;
+  background: #111;
 }
 
 .unline:hover:after {
   width: 100%;
-  background: black;
+  background: #111;
 }
 
 p {
   position: relative;
-  font-family: 'Product Sans';
-  font-weight: 400;
+  font-family: 'Inter UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
   font-size: 3.5vh;
-  left: 1vw;
+  letter-spacing: -0.1vh;
   cursor: default;
 }
 
@@ -199,14 +211,14 @@ a, span {
 }
 
 .one {
-  font-family: 'Product Sans';
+  font-family: 'Inter UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: italic;
 }
 
 .two {
-  font-family: 'Product Sans';
-  font-weight: 400;
+  font-family: 'Inter UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
   font-style: italic;
 }
 
@@ -215,7 +227,7 @@ a, span {
 }
 
 .awkward:active ~ span {
-  color: black;
+  color: #111;
 }
 
 ::-webkit-scrollbar {
@@ -228,40 +240,27 @@ a, span {
 }
 
 .full {
-  position: fixed;
+  position: absolute;
   margin: 0;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 1000;
-  background: white;
+  z-index: 75;
+  background: #f4f4f4;
 }
 
 .inv {
-  color: white;
+  color: #f4f4f4; font-family: 'Noto Sans JP', sans-serif;
   transition: background-color .3s ease, color .3s ease;
   -webkit-transition: background-color .3s ease, color .3s ease;
   -moz-transition: background-color .3s ease, color .3s ease;
 }
 .inv:hover {
-  color: black;
+  color: #111;
   transition: background-color .3s ease, color .3s ease;
   -webkit-transition: background-color .3s ease, color .3s ease;
   -moz-transition: background-color .3s ease, color .3s ease;
-}
-
-#click {
-  position: fixed;
-  width: 5vh;
-  height: 4vh;
-  bottom: 0;
-  right: 1vw;
-  background: black;
-  transform: scaleX(0);
-  transform-origin: right;
-  z-index: 330;
-  cursor: pointer;
 }
 
 .ap {
@@ -270,4 +269,26 @@ a, span {
 
 .alp:after {
   transform: scaleX(0);
+}
+
+@media only screen and (max-width: 768px) {
+  #C {
+    width: 90
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .space-div {
+    height: 7.5vw;
+  }
+  .title {
+    height: 50vw;
+  }
+  .stuff {
+    line-height: 18vw;
+    font-size: 20vw;
+  }
+  .stuff::after {
+    height: 3vw;
+  }
 }
