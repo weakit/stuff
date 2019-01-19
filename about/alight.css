@@ -1,5 +1,7 @@
 html, body {
   /* max-width: 100%; */
+  font-feature-settings: "calt" 1, "kern" 1, "liga" 1;
+  scroll-behavior: smooth;
   overflow-x: hidden;
   transition: background-color .1s ease;
   -webkit-transition: background-color .1s ease;
@@ -40,7 +42,7 @@ html, body {
   position: fixed;
   top: 0; left: 0;
   height: 9vh; opacity: 0.98;
-  background-color: #f4f4f4;
+  background-color: #f0f0f0;
   z-index: 100;
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
