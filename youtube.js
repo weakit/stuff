@@ -21,7 +21,7 @@ function onYouTubeIframeAPIReady() {
       'disablekb': 1,
       'playsinline': 1,
       'playlist': 'dQw4w9WgXcQ',
-      'modestbranding': 1,
+      // 'modestbranding': 1,
     },
     events: {
       'onReady': onPlayerReady,
@@ -30,21 +30,14 @@ function onYouTubeIframeAPIReady() {
   });
 }
 function onPlayerReady(event) {
+  event.target.mute();
   event.target.playVideo();
   setTimeout(function(){
     $("div#feet").fadeTo(200, 0.45);
   }, 1100);
   setTimeout(function(){
     $("p#hack").fadeTo(100, 1);
-    if (player.getPlayerState() == -1) {
-      player.mute();
-      player.playVideo();
-    }
-    setTimeout(function(){
-      if (player.getPlayerState() == -1) {
-        $("p#click").fadeTo(100, 1);
-      }
-    })
+    $("p#click").fadeTo(100, 1);
   }, 2000)
 }
 function onPlayerStateChange(event) {
@@ -66,6 +59,7 @@ function onPlayerStateChange(event) {
 $(document).on('click', '#content', function(){
   player.unMute();
   player.playVideo();
+  Cookies.set('mute', 'no', {'expires': 14});
   $("p#click").fadeTo(100, 0);
   $("p#click").text('enjoy');
   $("p#click").fadeTo(100, 1);

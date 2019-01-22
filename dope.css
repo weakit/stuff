@@ -136,18 +136,19 @@ body {
 }
 
 .home{
-  margin: 0
+  margin: 0;
   width: 100%;
   font-family: 'Inter UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 500;
-  font-size: 4.1vh;
+  font-size: 4vh;
+  line-height: 1em;
   letter-spacing: -0.06vh;
   color: white;
   z-index: 250;
 }
 
 .home span {
-  top: 2vh;
+  top: 3vh;
 }
 
 .home a {
@@ -197,7 +198,7 @@ body {
 .vw {
   position: fixed;
   left: 15vw;
-  top: 4.35vh;
+  top: 4.5vh;
   width: 70vw;
   transform: scaleX(0);
   transform-origin: left;
