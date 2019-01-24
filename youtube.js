@@ -36,8 +36,8 @@ function onPlayerReady(event) {
     player.unMute(); done1 = true;
   }
   player.playVideo();
-  var a = [(-1), 2];
-  if (player.getPlayerState() in a) {
+  var a = ['-1', '2'];
+  if (player.getPlayerState().toString(); in a) {
     player.mute(); player.playVideo();
     done1 = false;
   }
