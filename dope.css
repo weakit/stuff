@@ -75,7 +75,7 @@ body {
 
 #click, #hack{
   text-align: center;
-  line-height: 0px;
+  line-height: 0.1em;
   font-size: 1.33vw; /* to infinity and beyond */
   color: #ffffff;
   opacity: 0;
@@ -111,7 +111,6 @@ body {
 
 .span {
   text-align: center;
-  line-height: 0px;
   font-size: 1.1vw;
   color: #ffffff;
   opacity: 1;
@@ -234,4 +233,20 @@ body {
   .h1 {
     font-size: 8vh;
   }
+}
+
+.icon {
+  z-index: 69000;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  filter: drop-shadow(0, 0, 1rem black);
+  opacity: 0; visibility: hidden;
+}
+
+.icon > svg {
+  position: fixed;
+  bottom: 1vh;
+  right: 1vh;
+  cursor: pointer;
 }
