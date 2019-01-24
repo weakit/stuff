@@ -34,12 +34,16 @@ function onYouTubeIframeAPIReady() {
 }
 function onPlayerReady(event) {
   player.mute();
+  if (Cookies.get('mute') == 'no') {
+    player.unMute(); done1 = true;
+  }
   player.playVideo();
   setTimeout(function(){
-    if (Cookies.get('mute') == 'no') {
-      player.unMute(); done1 = true;
+    if (player.getPlayerState() == -1) {
+      player.mute(); done1 = false;
+      player.playVideo();
     }
-  }, 1);
+  }, 1500);
   if(player.isMuted()){
     done1 = false;
   }
