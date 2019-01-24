@@ -38,7 +38,9 @@ function onPlayerReady(event) {
     player.unMute(); done1 = true;
   }
   player.playVideo();
+  console.log(player.getPlayerState());
   setTimeout(function(){
+    console.log(player.getPlayerState());
     if (player.getPlayerState() == -1) {
       player.mute(); done1 = false;
       player.playVideo();
