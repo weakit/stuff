@@ -1,3 +1,5 @@
+// naive code
+
 var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
@@ -32,13 +34,13 @@ function onYouTubeIframeAPIReady() {
 }
 function onPlayerReady(event) {
   player.mute();
-  if (Cookies.get('mute') == 'no') {
-    player.unMute(); done1 = true;
-  }
   player.playVideo();
-  var a = ['-1', '2'];
-  if (player.getPlayerState().toString() in a) {
-    player.mute(); player.playVideo();
+  setTimeout(function(){
+    if (Cookies.get('mute') == 'no') {
+      player.unMute(); done1 = true;
+    }
+  }, 1);
+  if(player.isMuted()){
     done1 = false;
   }
   setTimeout(function(){
