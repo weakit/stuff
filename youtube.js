@@ -36,6 +36,10 @@ function onPlayerReady(event) {
     player.unMute(); done1 = true;
   }
   player.playVideo();
+  if (player.getPlayerState() in {-1, 2}) {
+    player.mute(); player.playVideo();
+    done1 = false;
+  }
   setTimeout(function(){
     $("div#feet").fadeTo(200, 0.45);
   }, 1100);
