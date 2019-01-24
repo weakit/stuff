@@ -5,7 +5,7 @@ var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-var done1 = false;
+var done1 = false; var muted = false;
 
 var player;
 function onYouTubeIframeAPIReady() {
@@ -38,16 +38,14 @@ function onPlayerReady(event) {
     player.unMute(); done1 = true;
   }
   player.playVideo();
-  console.log(player.getPlayerState());
   setTimeout(function(){
-    console.log(player.getPlayerState());
     if (player.getPlayerState() == -1) {
       player.mute(); done1 = false;
       player.playVideo();
     }
   }, 1500);
   if(player.isMuted()){
-    done1 = false;
+    done1 = false; muted = true;
   }
   setTimeout(function(){
     $("div#feet").fadeTo(200, 0.45);
@@ -101,12 +99,13 @@ function dontstop(){
     takecare();
   }
   if(Cookies.get('mute')){
-    if (Cookies.get('mute') == 'no') {
+    if (Cookies.get('mute') == 'no' && !muted) {
       Cookies.set('mute', 'yes', {'expires': 7});
       player.mute(); muted();
       player.playVideo();
     }
-    else if (Cookies.get('mute') == 'yes') {
+    else if (Cookies.get('mute') == 'yes' || muted) {
+      if (muted) {muted = false;}
       Cookies.set('mute', 'no', {'expires': 14});
       player.unMute(); unmuted();
       player.playVideo();
