@@ -6,7 +6,7 @@ html, body {
   -webkit-transition: background-color .1s ease;
   -moz-transition: background-color .1s ease;
   background-color: #f4f4f4;
-  color: #111;
+  color: #111; font-size: 3.5vh;
 }
 
 #C {
@@ -37,7 +37,8 @@ html, body {
   width: 100%;
   font-family: 'Inter UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 500;
-  line-height: 1em;
+  font-size: 3.5vh;
+  line-height: 3.5vh;
   position: fixed;
   top: 0; left: 0;
   height: 9vh; opacity: 0.98;
@@ -55,8 +56,9 @@ html, body {
 }
 
 .head span {
-  top: 2.75vh;
+  top: 1.75vh;
   z-index: 250;
+  padding: 1vh 1.25vh 1vh 1.25vh;
 }
 
 .head a {
@@ -110,25 +112,29 @@ html, body {
 .title {
   position: relative;
   cursor: default;
-  height: 35vh;
 }
 
 .stuff {
   opacity: 0;
   position: relative;
   display: inline-block;
-  font-size: 15vh;
+  font-size: 15vh; line-height: 1.1em;
   overflow: hidden;
   font-family: 'Inter UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
-  letter-spacing: -0.8vh;
+  letter-spacing: -0.8vh; kerning: normal;
   transition: background-color .3s ease, color .3s ease;
   -webkit-transition: background-color .3s ease, color .3s ease;
   -moz-transition: background-color .3s ease, color .3s ease;
   z-index: 75;
+  margin-bottom: 0;
 }
 
-.hover:hover, .reline:hover {
+.f {
+  margin-right: 0.8vh;
+}
+
+.hover:hover, .reline:hover, .unline:hover {
   background: #111;
   color: #f4f4f4;
   transition: background-color .3s ease, color .3s ease;
@@ -161,39 +167,23 @@ br::selection {
   background: #111;
 }
 
+.reline {
+  margin: 0;
+}
+
 .unline, .reline {
   text-decoration: none;
   display: inline-block;
   color:#111;
-}
-
-.unline:after, .reline:after {
-  content: '';
-  display: block;
-  height: 2px;
-}
-
-.reline {
-  margin: 0;
   transition: background-color .3s ease, color .3s ease;
   -webkit-transition: background-color .3s ease, color .3s ease;
   -moz-transition: background-color .3s ease, color .3s ease;
 }
 
-.unline:after{
-  width: 0;
-  background: transparent;
-  transition: width .5s ease, background-color .5s ease;
-  -webkit-transition: width .5s ease, background-color .5s ease;
-  -moz-transition: width .5s ease, background-color .5s ease;
-}
-
-.reline:after{
-  width: 100%;
-  background: #111;
-}
-
-.unline:hover:after {
+.reline:after {
+  content: '';
+  display: block;
+  height: 2px;
   width: 100%;
   background: #111;
 }
@@ -202,13 +192,8 @@ p {
   position: relative;
   font-family: 'Inter UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 500;
-  font-size: 3.5vh;
   letter-spacing: -0.1vh;
-  cursor: default;
-}
-
-a, span {
-  font-size: 3.5vh;
+  cursor: default; line-height: 1.3em;
 }
 
 .one {
@@ -231,15 +216,6 @@ a, span {
   color: #111;
 }
 
-::-webkit-scrollbar {
-  width: 3px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #000;
-    /* transform-origin: left; */
-}
-
 .full {
   position: absolute;
   margin: 0;
@@ -252,7 +228,7 @@ a, span {
 }
 
 .inv {
-  color: #f4f4f4; font-family: 'Noto Sans JP', sans-serif;
+  color: #f0f0f0; font-family: 'Noto Sans JP', sans-serif;
   transition: background-color .3s ease, color .3s ease;
   -webkit-transition: background-color .3s ease, color .3s ease;
   -moz-transition: background-color .3s ease, color .3s ease;
@@ -279,12 +255,6 @@ a, span {
 }
 
 @media only screen and (max-width: 600px) {
-  .space-div {
-    height: 7.5vw;
-  }
-  .title {
-    height: 50vw;
-  }
   .stuff {
     line-height: 18vw;
     font-size: 20vw;
