@@ -32,7 +32,10 @@
 html {
   background-color: rgb(0,0,0);
   min-height: 100%;
-  font-feature-settings: calt 1,kern 1,liga 1;
+  -webkit-text-size-adjust: 100%;
+  -moz-font-feature-settings: "calt" 1, "kern" 1, "liga" 1;
+  font-feature-settings: "calt" 1, "kern" 1, "liga" 1;
+  text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
 }
 
@@ -95,6 +98,10 @@ body {
   text-decoration: none;
 }
 
+#feet a:hover {
+  text-decoration: underline;
+}
+
 .feet {
   text-align: center;
   font-family: 'Inter UI','Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -146,7 +153,6 @@ body {
 
 .home a {
   color: white;
-  text-decoration: none;
 }
 
 .home div {
@@ -238,7 +244,7 @@ body {
 }
 
 .icon > svg {
-  position: fixed;
+  position: fixed; height: 7vh;
   right: 1vh; bottom: 1vh;
   cursor: pointer;
 }

@@ -7,11 +7,13 @@ html, body {
 	-moz-transition: background-color .1s ease;
 	background-color: #f4f4f4;
 	color: #111;
+	scrollbar-width: thin;
+	scrollbar-color: #111 #f4f4f4;
 	font-size: 3.5vh;
 }
 
 #C {
-	width: 80%;
+	width: 70%;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -275,4 +277,18 @@ p {
 	.stuff::after {
 		height: 3vw;
 	}
+}
+
+::-webkit-scrollbar {
+    width: 0.2vw;
+		min-width: 4px;
+}
+
+::-webkit-scrollbar-track-piece  {
+    background-color: #f4f4f4;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    background-color: #111;
 }

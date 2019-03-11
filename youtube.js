@@ -58,7 +58,7 @@ function onPlayerReady(event) {
         setTimeout(takecare, 2000);
       } else {
         $("p#click").css('cursor', 'pointer');
-        $("p#click").fadeTo(100, 1); setTimeout(muted, 2200);
+        $("p#click").fadeTo(100, 1);
       }
     }, 30);
   }, 2100);
@@ -76,7 +76,7 @@ function unmuted(){
   $("div#mute").fadeTo(60, 1);
 }
 
-function muted(){
+function mutant(){ // idk why
   $("div#mute").fadeTo(100, 0);
   $("div#mute").css('visibility', 'hidden');
   $("div#unmute").css('visibility', 'visible');
@@ -96,12 +96,13 @@ function takecare() {
 
 function dontstop(){
   if (!done1){
+    player.unMute();
     takecare();
   }
   if(Cookies.get('mute')){
     if (Cookies.get('mute') == 'no' && !muted) {
       Cookies.set('mute', 'yes', {'expires': 7});
-      player.mute(); muted();
+      player.mute(); mutant();
       player.playVideo();
     }
     else if (Cookies.get('mute') == 'yes' || muted) {
