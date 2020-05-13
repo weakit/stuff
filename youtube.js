@@ -6,7 +6,6 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var done1 = false; var muted = false;
-
 var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {

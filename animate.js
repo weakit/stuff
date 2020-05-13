@@ -12,8 +12,8 @@ $(window).on('load', function(){
    }, 100);
 });
 
-$.getScript("./words/adjectives.min.js", function(){});
-$.getScript("./words/nouns.min.js", function(){});
+$.getScript("./words/adjectives.js", function(){});
+$.getScript("./words/nouns.js", function(){});
 
 function animate(){
   setTimeout(function(){

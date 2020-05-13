@@ -37,6 +37,12 @@ html {
   font-feature-settings: "calt" 1, "kern" 1, "liga" 1;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 body {
