@@ -30,7 +30,7 @@ function setLink() {
     $("#link").attr("href", json["linkTo"]);
 }
 
-function loadPage(page) {
+function loadPage() {
     setTimeStr();
     time = setInterval(setTimeStr, 500);
     setTimeout(setTitle, 100);
@@ -40,8 +40,8 @@ function loadPage(page) {
 }
 
 $(document).ready(function () {
-    jQuery.getJSON(page, function (data) {
+    jQuery.getJSON($("html").attr("content"), function (data) {
         json = data;
     });
-    loadPage($("html").attr("content"));
+    loadPage();
 });
