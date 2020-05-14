@@ -42,6 +42,6 @@ function loadPage() {
 $(document).ready(function () {
     jQuery.getJSON($("html").attr("content"), function (data) {
         json = data;
+        loadPage();
     });
-    loadPage();
 });
