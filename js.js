@@ -31,9 +31,6 @@ function setLink() {
 }
 
 function loadPage(page) {
-    jQuery.getJSON(page, function (data) {
-        json = data;
-    });
     setTimeStr();
     time = setInterval(setTimeStr, 500);
     setTimeout(setTitle, 100);
@@ -43,5 +40,8 @@ function loadPage(page) {
 }
 
 $(document).ready(function () {
+    jQuery.getJSON(page, function (data) {
+        json = data;
+    });
     loadPage($("html").attr("content"));
 });
