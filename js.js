@@ -31,7 +31,7 @@ function setLink() {
 }
 
 function loadPage(page) {
-    jQuery.getJSON(page + ".content", function (data) {
+    jQuery.getJSON(page, function (data) {
         json = data;
     });
     setTimeStr();
@@ -43,5 +43,5 @@ function loadPage(page) {
 }
 
 $(document).ready(function () {
-    loadPage(window.location.href);
+    loadPage($("html").attr("content"));
 });
