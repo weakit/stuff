@@ -10,6 +10,16 @@
     font-family: inherit;
 }
 
+*::selection {
+    color: #121212;
+    background: #ededed;
+}
+
+*::-moz-selection {
+    color: #121212;
+    background: #ededed;
+}
+
 body {
     font-family: 'Fira Code', monospace, sans-serif;
     font-weight: 400;
