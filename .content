@@ -1,0 +1,10 @@
+{
+    "pageTitle": "Home",
+    "title": "Home",
+    "titleTo": ".",
+    "email": "wea.kit (at) outlook.com",
+    "emailTo": "mailto:wea.kit@outlook.com",
+    "link": "github (@weakit)",
+    "linkTo": "https://github.com/weakit/",
+    "content": "<p>Hello there.<br\/><br\/>I'm Roshan. I make stuff sometimes.<br\/>These things&mdash;they're not very impressive.<br\/><br\/>I'm still going to put them on the internet&mdash;because why not?<br\/><br\/> Here's a bunch I'm particularly fond of:<br\/><br\/> <ul> <li><a href=\"https:\/\/github.com\/weakit\/GCI19-TicTacToe\">Tic Tac Toe (w\/ AI)<\/a><br\/> <\/li><li><a href=\"https:\/\/github.com\/weakit\/lyrics-scraper\">A rather stupid lyrics scraper for mp3s<\/a><br\/><\/li><li><a href=\"https:\/\/github.com\/weakit\/bank9000\">A Terminal User Interface (in disguise)<\/a><br\/> <\/li><li><a href=\"https:\/\/github.com\/weakit\/stuff\">This website<\/a><\/li><li><a href=\".\/higher-brain-functions\/\">And this beauty<\/a><\/li><\/ul><\/p>"
+}
