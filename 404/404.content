@@ -6,5 +6,5 @@
     "emailTo": "\/",
     "link": "go back",
     "linkTo": "\/",
-    "content": "<p>You shouldn't be here<br\/><br\/>Why don't you try <a href=\"\/\">going back?<\/a><\/p>"
+    "content": "<p>You shouldn't be here.<br\/><br\/>Why don't you try <a href=\"\/\">the home page?<\/a><\/p>"
 }
