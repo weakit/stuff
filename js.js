@@ -39,8 +39,23 @@ function loadPage() {
     setTimeout(setLink, 250);
 }
 
+var getJSON = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status === 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status, xhr.response);
+      }
+    };
+    xhr.send();
+};
+
 $(document).ready(function () {
-    jQuery.getJSON($("html").attr("content"), function (data) {
+    getJSON($("html").attr("content"), function (status, data) {
         json = data;
         loadPage();
     });
