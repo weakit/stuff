@@ -30,20 +30,65 @@ function setLink() {
     $("#link").attr("href", json["Footer Link"]);
 }
 
-function loadPage() {
+function setPage() {
     setTimeStr();
     time = setInterval(setTimeStr, 500);
 
     // load with delay for ✨dat cool stuff✨
-    setTimeout(setTitle, 90);
-    setTimeout(setContent, 120);
-    setTimeout(setEmail, 150);
-    setTimeout(setLink, 180);
+    setTimeout(setTitle, 40);
+    setTimeout(setContent, 80);
+    setTimeout(setEmail, 120);
+    setTimeout(setLink, 160);
+    setTimeout(updateLinks, 161);
+}
+
+function tryLoadingLink(target) {
+    if (window.location.host != target.host)
+        window.location.href = target.href;
+
+    var look_in;
+
+    if (target.pathname.endsWith('/'))
+        look_in = target.pathname + 'main.content';
+    else if (target.pathname.endsWith('.html'))
+        look_in = target.pathname.slice(0, -5) + '.content';
+    else
+        look_in = target.pathname + '.content';
+
+    $.ajax({
+        url: look_in,
+        success: function(data) {
+            json = jsyaml.load(data);
+            window.history.pushState('wait', 'what', target.pathname)
+            setPage();
+        },
+        error: function() {
+            window.location.href = target.href;
+        },
+    });
+}
+
+function onLinkClick(e) {
+    e.preventDefault();
+    tryLoadingLink(e.target);
+}
+
+function handlePopState(e) {
+    tryLoadingLink(e.target.location);
+}
+
+function updateLinks() {
+    $('a').click(onLinkClick);
+}
+
+function loadPage(content) {
+    $.get(content).then(function(data) {
+        json = jsyaml.load(data);
+        setPage();
+    });
 }
 
 $(document).ready(function() {
-    $.get($("html").attr("content"), null, function(data, status) {
-        json = jsyaml.load(data);
-        loadPage();
-    });
+    loadPage($("html").attr("content"));
+    window.onpopstate = handlePopState;
 });
