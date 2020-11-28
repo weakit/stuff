@@ -11,52 +11,39 @@ function setTimeStr() {
 }
 
 function setTitle() {
-    $("#title").text(json["title"]);
-    $("#title").attr("href", json["titleTo"]);
-    $(document).prop("title", json["pageTitle"]);
+    $("#title").text(json["Page Title"]);
+    $("#title").attr("href", json["Title Link"]);
+    $(document).prop("title", json["HTML Title"]);
 }
 
 function setContent() {
-    $("#content").html(json["content"]);
+    $("#content").html(json["Content"]);
 }
 
 function setEmail() {
-    $("#email").text(json["email"]);
-    $("#email").attr("href", json["emailTo"]);
+    $("#email").text(json["Email"]);
+    $("#email").attr("href", json["Email Link"]);
 }
 
 function setLink() {
-    $("#link").text(json["link"]);
-    $("#link").attr("href", json["linkTo"]);
+    $("#link").text(json["Footer"]);
+    $("#link").attr("href", json["Footer Link"]);
 }
 
 function loadPage() {
     setTimeStr();
     time = setInterval(setTimeStr, 500);
-    setTimeout(setTitle, 100);
-    setTimeout(setContent, 150);
-    setTimeout(setEmail, 200);
-    setTimeout(setLink, 250);
+
+    // load with delay for ✨dat cool stuff✨
+    setTimeout(setTitle, 90);
+    setTimeout(setContent, 120);
+    setTimeout(setEmail, 150);
+    setTimeout(setLink, 180);
 }
 
-var getJSON = function(url, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-      var status = xhr.status;
-      if (status === 200) {
-        callback(null, xhr.response);
-      } else {
-        callback(status, xhr.response);
-      }
-    };
-    xhr.send();
-};
-
 $(document).ready(function () {
-    getJSON($("html").attr("content"), function (status, data) {
-        json = data;
+    $.get($("html").attr("content"), null, function (data, status) {
+        json = jsyaml.load(data);
         loadPage();
     });
 });
