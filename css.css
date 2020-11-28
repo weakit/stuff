@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
-
 @viewport {
     width: device-width;
 }
@@ -27,7 +26,6 @@ body {
     color: #ededed;
     background-color: #121212;
     line-height: 1.5;
-
     font-kerning: normal;
     width: 100%;
     max-width: 800px;
@@ -37,7 +35,6 @@ body {
     -ms-text-size-adjust: 100%;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-
     -moz-font-feature-settings: "calt"1, "kern"1, "liga"1;
     -ms-font-feature-settings: "calt"1, "kern"1, "liga"1;
     -o-font-feature-settings: "calt"1, "kern"1, "liga"1;
@@ -105,14 +102,14 @@ p {
     margin-bottom: 1px;
 }
 
-ul {
+.arrows {
     list-style: none;
     margin-left: 0;
     padding-left: 4ch;
     text-indent: -4ch;
 }
 
-ul li:before {
+.arrows li:before {
     content: "--> ";
 }
 
@@ -128,24 +125,19 @@ a:hover {
     cursor: hand;
 }
 
-
 @media (min-width: 550px) {
     #title {
         float: left;
     }
-
     #time {
         float: right;
     }
-
     #footer {
         text-align: left;
     }
-
     #email {
         float: left;
     }
-
     #link {
         float: right;
     }

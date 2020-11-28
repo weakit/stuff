@@ -41,8 +41,8 @@ function loadPage() {
     setTimeout(setLink, 180);
 }
 
-$(document).ready(function () {
-    $.get($("html").attr("content"), null, function (data, status) {
+$(document).ready(function() {
+    $.get($("html").attr("content"), null, function(data, status) {
         json = jsyaml.load(data);
         loadPage();
     });

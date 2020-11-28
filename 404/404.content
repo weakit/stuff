@@ -1,10 +1,17 @@
-{
-    "pageTitle": "Huh?",
-    "title": "404",
-    "titleTo": "\/",
-    "email": "home page",
-    "emailTo": "\/",
-    "link": "home page",
-    "linkTo": "\/",
-    "content": "<p>You shouldn't be here.<br\/><br\/>Try looking at:<br\/><br\/><ul><li><a href=\"\/\">the home page<\/a><\/li><\/ul><\/p>"
-}
+HTML Title: Huh?
+Page Title: 404
+Title Link: /
+
+Email: home page
+Email Link: /
+
+Footer: home page
+Footer Link: /
+
+Content: "
+<p>You shouldn't be here.<br/><br/>Try looking at:<br/><br/>
+<ul>
+   <li><a href="/">the home page</a></li>
+</ul>
+</p>
+"
