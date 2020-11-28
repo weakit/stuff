@@ -102,14 +102,18 @@ p {
     margin-bottom: 1px;
 }
 
-.arrows {
+#content p {
+    padding-bottom: 1.4em;
+}
+
+ul {
     list-style: none;
     margin-left: 0;
     padding-left: 4ch;
     text-indent: -4ch;
 }
 
-.arrows li:before {
+ul li:before {
     content: "--> ";
 }
 

@@ -1,5 +1,6 @@
 var time;
 var json;
+var md = null;
 
 function getTimeStr() {
     var t = new Date();
@@ -17,7 +18,11 @@ function setTitle() {
 }
 
 function setContent() {
-    $("#content").html(json["Content"]);
+    if (md == null) {
+        md = new showdown.Converter();
+        // md.setFlavor('github');
+    }
+    $("#content").html(md.makeHtml(json["Content"]));
 }
 
 function setEmail() {

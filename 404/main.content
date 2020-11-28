@@ -8,9 +8,8 @@ Email Link: /
 Footer: home page
 Footer Link: /
 
-Content:
-   <p>You shouldn't be here.<br/><br/>Try looking at:<br/><br/>
-   <ul class=arrows>
-      <li><a href="/">the home page</a></li>
-   </ul>
-   </p>
+Content: |
+   You shouldn't be here.
+   
+   Try looking at:
+      - the home page
