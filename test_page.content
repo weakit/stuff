@@ -1,0 +1,16 @@
+HTML Title: Test Page
+Page Title: Test Page
+Title Link: /
+
+Email: wea.kit (at) outlook.com
+Email Link: mailto:wea.kit@outlook.com
+
+Footer: github (@weakit)
+Footer Link: https://github.com/weakit/
+
+Content: |
+   This is a test page.
+
+   If you see this page, the site is working properly.
+
+   Click [here](/) to go back to the homepage.

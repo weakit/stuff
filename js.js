@@ -1,4 +1,4 @@
-var time;
+var time = null;
 var json;
 var md = null;
 
@@ -20,7 +20,6 @@ function setTitle() {
 function setContent() {
     if (md == null) {
         md = new showdown.Converter();
-        // md.setFlavor('github');
     }
     $("#content").html(md.makeHtml(json["Content"]));
 }
@@ -37,7 +36,8 @@ function setLink() {
 
 function setPage() {
     setTimeStr();
-    time = setInterval(setTimeStr, 500);
+    if (time == null)
+        time = setInterval(setTimeStr, 1000);
 
     // load with delay for ✨dat cool stuff✨
     setTimeout(setTitle, 40);
@@ -47,7 +47,7 @@ function setPage() {
     setTimeout(updateLinks, 161);
 }
 
-function tryLoadingLink(target) {
+function tryLoadingLink(target, success = function() {}) {
     if (window.location.host != target.host)
         window.location.href = target.href;
 
@@ -64,7 +64,7 @@ function tryLoadingLink(target) {
         url: look_in,
         success: function(data) {
             json = jsyaml.load(data);
-            window.history.pushState('wait', 'what', target.pathname)
+            success();
             setPage();
         },
         error: function() {
@@ -75,7 +75,9 @@ function tryLoadingLink(target) {
 
 function onLinkClick(e) {
     e.preventDefault();
-    tryLoadingLink(e.target);
+    tryLoadingLink(e.target, function() {
+        window.history.pushState(null, null, e.target.pathname)
+    });
 }
 
 function handlePopState(e) {
@@ -93,7 +95,12 @@ function loadPage(content) {
     });
 }
 
+window.onpopstate = handlePopState;
+
 $(document).ready(function() {
-    loadPage($("html").attr("content"));
-    window.onpopstate = handlePopState;
+    content_location = $("html").attr("content");
+    if (content_location.endsWith(".content"))
+        loadPage(content_location);
+    else if (content_location == "get")
+        tryLoadingLink(window.location);
 });
