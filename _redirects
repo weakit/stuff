@@ -3,6 +3,3 @@
 
 /test_page   /index.html      200
 /*           /404/            404
-
-/.well-known/matrix/server https://matrix.rosh.h4ck.me/matrix-server-delegation 200
-/.well-known/matrix/client https://matrix.rosh.h4ck.me/matrix-client-delegation 200
