@@ -1,5 +1,9 @@
 import * as React from 'react'
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 class Clock extends React.Component {
     constructor(props) {
         super(props)
@@ -20,6 +24,11 @@ class Clock extends React.Component {
 
     componentDidMount() {
         this.updateTime()
+
+        // dirty, poorly written time synchronizer
+        while (this.state.time == new Date().toUTCString().slice(17)) {
+            await sleep(50);
+        }
         this.interval = setInterval(
             () => {this.updateTime()}, 1000
         )
