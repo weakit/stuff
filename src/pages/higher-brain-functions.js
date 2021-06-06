@@ -8,11 +8,15 @@ class Redirecter extends React.Component {
     }
 
     componentDidMount() {
-        setTimeout(
+        this.timeout = setTimeout(
             function() {
                 window.location.href = "https://youtu.be/dQw4w9WgXcQ"
             }, 2000
         );
+    }
+
+    componentWillUnmount() {
+        clearTimeout(this.timeout)
     }
 }
 
