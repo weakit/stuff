@@ -12,6 +12,7 @@ const DefaultPage = (props) => {
                 <title>{props.pageTitle}</title>
                 <meta name="theme-color" content="#121212"/>
                 <link rel="icon" href="data:image/gif;base64,R0lGODdhAQABAIAAAO3t7e3t7SwAAAAAAQABAAACAkQBADs="/>
+                <meta name="google-site-verification" content="nBxx9LshwaKL4g5uiZ1Tt-eKXgfo4gbafm-gl8lwRC4"/>
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
                 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
