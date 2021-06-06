@@ -2,7 +2,7 @@ import * as React from 'react'
 
 class Clock extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             time: "Current Time"
         }

@@ -2,6 +2,20 @@ import * as React from 'react'
 import {Helmet} from 'react-helmet'
 import { centre } from '../styles/hbf.module.css'
 
+class Redirecter extends React.Component {
+    render() {
+        return <span></span>
+    }
+
+    componentDidMount() {
+        setTimeout(
+            function() {
+                window.location.href = "https://youtu.be/dQw4w9WgXcQ"
+            }, 2000
+        );
+    }
+}
+
 const IndexPage = () => {
     return (
         <div className={centre}>
@@ -12,15 +26,8 @@ const IndexPage = () => {
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
                 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <script type="text/javascript">
-                setTimeout(
-                        function() {
-                            window.location.href = "https://youtu.be/dQw4w9WgXcQ"
-                        }, 3000
-                    );
-                </script>
             </Helmet>
-            <h1>PLEASE WAIT</h1>
+            <h1>PLEASE WAIT</h1><Redirecter></Redirecter>
         </div>
     )
 }
