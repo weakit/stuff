@@ -43,67 +43,58 @@ body {
     font-synthesis: none;
 }
 
-#container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+a {
+    color: inherit;
+    margin-bottom: 1px;
+    text-decoration: none;
 }
 
-#content {
-    order: 2;
-    flex: 1 1 auto;
-    margin: 0 2rem 0 2rem;
+a:hover {
+    margin-bottom: 0;
+    border-bottom: 1px solid #ededed;
+    cursor: hand;
 }
 
-h1 {
-    font-size: 1.75rem;
-    font-weight: 600;
-}
-
-#caution {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    text-transform: uppercase;
-}
-
-#caution h1 {
-    margin: auto;
-}
-
-h2 {
-    font-weight: 500;
-}
-
-#header {
-    display: block;
-    order: 1;
-    overflow: hidden;
-    margin: 2rem 2rem 2.5rem 2rem;
-    text-transform: uppercase;
-}
-
-#time {
-    cursor: progress;
-}
-
-#footer {
-    order: 3;
-    bottom: 0;
-    margin: 2.5rem 2rem 2rem 2rem;
-    line-height: 1.5rem;
-    width: inherit;
+.content a::after {
+    content: ' 🡕';
 }
 
 p {
     margin-bottom: 1px;
 }
 
-#content p {
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: block;
+    order: 1;
+    overflow: hidden;
+    margin: 2rem 2rem 2.5rem 2rem;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.content {
+    order: 2;
+    flex: 1 1 auto;
+    margin: 0 2rem 0 2rem;
+}
+
+.content p, ul{
     padding-bottom: 1.4em;
+}
+
+.footer {
+    order: 3;
+    margin: 2.5rem 2rem 2rem 2rem;
+    line-height: 1.5rem;
+    width: inherit;
 }
 
 ul {
@@ -117,32 +108,16 @@ ul li:before {
     content: "--> ";
 }
 
-a {
-    color: inherit;
-    margin-bottom: 1px;
-    text-decoration: none;
-}
-
-a:hover {
-    margin-bottom: 0;
-    border-bottom: 1px solid #ededed;
-    cursor: hand;
+.progress {
+    cursor: progress;
 }
 
 @media (min-width: 550px) {
-    #title {
+    .floatLeft {
         float: left;
     }
-    #time {
-        float: right;
-    }
-    #footer {
-        text-align: left;
-    }
-    #email {
-        float: left;
-    }
-    #link {
+
+    .floatRight {
         float: right;
     }
 }
