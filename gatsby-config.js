@@ -3,7 +3,6 @@ module.exports = {
     title: "rosh.h4ck.me",
   },
   plugins: [
-    "gatsby-plugin-sitemap",
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -18,7 +18,6 @@
     "gatsby": "^3.6.2",
     "gatsby-plugin-catch-links": "^3.6.0",
     "gatsby-plugin-react-helmet": "^4.6.0",
-    "gatsby-plugin-sitemap": "^4.2.0",
     "gatsby-source-filesystem": "^3.6.0",
     "gatsby-transformer-remark": "^4.3.0",
     "react": "^17.0.1",
