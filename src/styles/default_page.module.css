@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Code&text=%F0%9F%A1%95');
+
 @viewport {
     width: device-width;
 }
@@ -41,6 +43,7 @@ body {
     -webkit-font-feature-settings: "calt"1, "kern"1, "liga"1;
     font-feature-settings: "calt"1, "kern"1, "liga"1;
     font-synthesis: none;
+    unicode-range: U+00-7F, U+2197;
 }
 
 a {
