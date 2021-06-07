@@ -57,6 +57,7 @@ a:hover {
 
 .content a::after {
     padding-left: .3ch;
+    padding-right: .1ch;
     content: '↗';
 }
 
