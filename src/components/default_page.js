@@ -3,6 +3,7 @@ import {Helmet} from 'react-helmet'
 import {Link} from 'gatsby'
 import Clock from './clock.js'
 import * as Style from '../styles/default_page.module.css'
+import '../fonts/fira-code/fira_code_default.css'
 import PropTypes from 'prop-types'
 
 const DefaultPage = (props) => {

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import {Helmet} from 'react-helmet'
 import { centre } from '../styles/hbf.module.css'
+import '../fonts/fira-code/fira_code_default.css'
 
 class Redirecter extends React.Component {
     render() {
