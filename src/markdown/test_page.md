@@ -10,4 +10,4 @@ This is a test page. This is a not so interesing link: [link](https://example.co
 - [this](https://example.com) is the same link as before.
 - this is the end of the list (big sad)
 
-you should be leaving now. use [this](/). bye!
+you should be leaving now. [go back home](/). bye!

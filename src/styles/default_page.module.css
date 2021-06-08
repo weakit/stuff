@@ -30,17 +30,11 @@ body {
     max-width: 800px;
     margin: 0 auto;
     text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    -moz-font-feature-settings: "calt"1, "kern"1, "liga"1;
-    -ms-font-feature-settings: "calt"1, "kern"1, "liga"1;
-    -o-font-feature-settings: "calt"1, "kern"1, "liga"1;
-    -webkit-font-feature-settings: "calt"1, "kern"1, "liga"1;
     font-feature-settings: "calt"1, "kern"1, "liga"1;
     font-synthesis: none;
-    unicode-range: U+00-7F, U+2197;
+    text-rendering: optimizeLegibility;
 }
 
 a {
@@ -49,16 +43,29 @@ a {
     text-decoration: none;
 }
 
+.content a {
+    box-shadow:
+    inset 0 -0.04em #121212,
+    inset 0 -0.175em rgba(237, 237, 237, 0.275);
+}
+
 a:hover {
     margin-bottom: 0;
-    border-bottom: 1px solid #ededed;
     cursor: hand;
+    box-shadow:
+    inset 0 -0.04em #121212,
+    inset 0 -0.175em rgba(237, 237, 237, 0.7);
 }
 
 .content a::after {
     padding-left: .3ch;
     padding-right: .1ch;
     content: '↗';
+}
+
+.content a[href^="https://rosh.h4ck.me"]::after, a[href^="/"]::after {
+    content: '';
+    padding: 0;
 }
 
 p {
