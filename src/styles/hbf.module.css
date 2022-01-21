@@ -1,13 +1,93 @@
-
-.centre {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    text-transform: uppercase;
+.body {
+    max-width: none;
 }
 
-.centre h1 {
-    margin: auto
+.centre-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 6px 12px;
+    background: #121212;
+    color: #ededed;
+    border: 5px solid #ededed;
+    cursor: pointer;
+}
+
+.button:focus {
+    outline: 5px solid hsla(0, 0%, 93%, .6);
+}
+
+.button:hover, .button:active {
+    background: #ededed;
+    color: #121212;
+}
+
+.scr-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.scr {
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    background: #121212;
+}
+
+.video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
+}
+
+.pity {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 20vh;
+    min-height: 150px;
+    z-index: 150;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pity div {
+    padding: 20px 40px;
+    background: #121212;
+}
+
+.pity a {
+    box-shadow: inset 0 -0.04em #121212,
+    inset 0 -0.175em rgba(237, 237, 237, 0.275);
+}
+
+.pity a:hover {
+    margin-bottom: 0;
+    cursor: hand;
+    box-shadow: inset 0 -0.04em #121212,
+    inset 0 -0.175em rgba(237, 237, 237, 0.7);
+}
+
+.pity a::after {
+    content: '';
+    padding: 0;
 }
