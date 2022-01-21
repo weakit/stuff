@@ -17,4 +17,4 @@ Here's a bunch I'm particularly fond of:
 - [A rather stupid lyrics scraper for mp3s](https://github.com/weakit/lyrics-scraper)
 - [A Terminal User Interface (in disguise)](https://github.com/weakit/bank9000)
 - [This website](https://github.com/weakit/stuff)
-- [And this beauty](./higher-brain-functions/)
+- [And this beauty](/higher-brain-functions/)

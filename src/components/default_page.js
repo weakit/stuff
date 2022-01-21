@@ -49,7 +49,7 @@ DefaultPage.defaultProps = {
     footerLink: "https://github.com/weakit",
     footerText: "github (@weakit)",
     children: (
-        <p>Wait a sec.<br /><br /><br />If that didn't work, try refreshing the page, or check back later.</p>
+        <p>Wait a sec.<br/><br/><br/>If that didn't work, try refreshing the page, or check back later.</p>
     ),
 }
 
@@ -59,5 +59,5 @@ function CreateList() {
     </ul>
 }
 
-export { CreateList }
+export {CreateList}
 export default DefaultPage

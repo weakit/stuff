@@ -58,12 +58,12 @@ a:hover {
 }
 
 .content a::after {
-    padding-left: .3ch;
+    padding-left: .35ch;
     padding-right: .1ch;
     content: '↗';
 }
 
-.content a[href^="https://rosh.h4ck.me"]::after, a[href^="/"]::after {
+.content a[href^="https://rosh.h4ck.me"]::after, a[href^="/"]::after, a[href^="./"]::after {
     content: '';
     padding: 0;
 }
