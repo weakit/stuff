@@ -26,9 +26,9 @@ body {
     background-color: #121212;
     line-height: 1.5;
     font-kerning: normal;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    /*width: 100%;*/
+    /*max-width: 800px;*/
+    /*margin: 0 auto;*/
     text-size-adjust: 100%;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
@@ -81,6 +81,26 @@ p {
     min-height: 100vh;
 }
 
+.header a:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 4px hsla(0, 0%, 93%, .6);
+}
+
+
+.content p, ul {
+    padding-bottom: 1.4em;
+}
+
+.body {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .header {
     display: block;
     order: 1;
@@ -91,26 +111,16 @@ p {
     font-weight: 600;
 }
 
-.header a:focus {
-    outline: none;
-    box-shadow: 0px 0px 0px 4px hsla(0, 0%, 93%, .6);
-}
-
 .content {
     order: 2;
     flex: 1 1 auto;
     margin: 0 2rem 0 2rem;
 }
 
-.content p, ul {
-    padding-bottom: 1.4em;
-}
-
 .footer {
     order: 3;
     margin: 2.5rem 2rem 2rem 2rem;
     line-height: 1.5rem;
-    width: inherit;
 }
 
 ul {
@@ -126,6 +136,31 @@ ul li:before {
 
 .progress {
     cursor: progress;
+}
+
+.content h2 {
+    padding-top: 1em;
+    padding-bottom: .3em;
+}
+
+.content h1 {
+    padding-bottom: .3em;
+}
+
+code {
+    display: flex;
+    flex-direction: column;
+}
+
+code::after, code::before {
+    content: '';
+    display: block;
+    left: 0;
+    margin: 1em 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 0px;
+    border-bottom: 2px solid hsla(0, 0%, 93%, .6);
 }
 
 @media (min-width: 550px) {

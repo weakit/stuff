@@ -56,15 +56,13 @@ const IndexPage = () => {
                 <title>Higher Brain Functions</title>
                 <meta name="theme-color" content="#121212"/>
                 <link rel="icon" href="data:image/gif;base64,R0lGODdhAQABAIAAAO3t7e3t7SwAAAAAAQABAAACAkQBADs="/>
-                <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-                <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+                <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
             </Helmet>
-            <body style={{maxWidth: 'none', height: '100vh', width: '100vw', left: 0, position: 'fixed'}}>
             <div className={Styles.centreContainer}>
                 <Sneaky/>
             </div>
-            </body>
         </div>
 
     )
